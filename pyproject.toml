@@ -1,0 +1,25 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "boiler-cli"
+version = "0.1.0"
+dependencies = [
+  "pygit2",
+  "click",
+  "rich",
+  "rich-click",
+  "Jinja2"
+]
+requires-python = ">=3.12"
+authors = [
+  {name = "Dax Harris"},
+]
+description = "CLI for generating projects based on a template."
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["boilerplate", "templates"]
+
+[project.urls]
+Repository = "https://github.com/iTecAI/boiler"
