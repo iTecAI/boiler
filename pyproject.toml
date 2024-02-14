@@ -10,7 +10,9 @@ dependencies = [
   "click",
   "rich",
   "rich-click",
-  "Jinja2"
+  "Jinja2",
+  "toml",
+  "pydantic"
 ]
 requires-python = ">=3.12"
 authors = [
@@ -23,3 +25,6 @@ keywords = ["boilerplate", "templates"]
 
 [project.urls]
 Repository = "https://github.com/iTecAI/boiler"
+
+[tool.hatch.build.targets.wheel]
+packages = ["boiler_cli/cli", "boiler_cli/lib"]
