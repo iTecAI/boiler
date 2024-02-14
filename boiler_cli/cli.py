@@ -1,3 +1,4 @@
+import os
 import rich_click as click
 from rich.console import Console
 from lib import *
@@ -22,7 +23,7 @@ def main(ctx: click.Context, git: str = None, path: str = None):
     if git:
         source = GitSource(git, environment.directory.name)
     else:
-        source = PathSource(path, environment.directory.name)
+        source = PathSource(os.path.abspath(path), environment.directory.name)
 
     ctx.obj = ctx.with_resource(Accumulator(environment, source, console))
 
