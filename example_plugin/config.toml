@@ -1,8 +1,0 @@
-name = "Example Plugin"
-module_name = "example_plugin"
-version = "0.0.1"
-dependencies = [
-    "httpx"
-]
-entrypoint = "__init__.py"
-registry = "ExampleRegistry"
